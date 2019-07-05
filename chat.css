@@ -1,0 +1,144 @@
+body {
+    background-image: url(pictures/matrix.gif);
+    background-size: contain;
+  }
+
+#dad {
+   width:600px;
+   height: 600px;
+   border-radius: 35px;
+   background: #e60073;
+   position: relative;
+   border-block-color: black;
+   background-color: black;
+   /* background-image: radial-gradient(rgba(0, 150, 0, 0.75), black 120%); */
+   background-image: radial-gradient(#280096bf, black 80%);
+   margin-left: auto;
+   margin-right: auto;
+   text-align: center;
+   overflow-y: scroll;
+  scroll-behavior: smooth;
+      
+}
+ 
+ /* #mainuser {
+ 
+  
+}  */
+
+ .user {
+    border: 2px solid;
+    border-color: black;
+    background-color: white;
+    width:45px;
+    height:45px;
+    border-radius:10px 10px 0 10px;
+    float:right;
+    width:50%;
+    
+    /* display: block;
+    width: 20px;
+    height: 10px;
+    margin: 10px 20px;
+    border: solid dotted black;
+    float: right;
+    text-align: right;
+    border-radius: 10px 10px 0 10px;
+    box-sizing: border-box; */
+     /* color: #fff;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px
+    #e60073, 0 0 60px, #e60073, 0 0 70px #e60073;
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px 
+    #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6; */
+    
+    
+} 
+
+
+.chatbot {
+    border: 2px solid;
+    border-color: black;
+    background-color: blue;
+    width:45px;
+    height:45px;
+    border-radius:10px 10px 0 10px;
+    float:left;
+    width:50%;
+    /* -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px violet 0 0 40px #e60073, 0 0 50px
+    #e60073, 0 0 60px, #e60073, 0 0 70px #e60073;
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px 
+    #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    text-align: left;
+    margin-right: 36px;
+    border-color: red;
+    float: left;
+    border-bottom-left-radius: 0px;     */
+    
+} 
+
+
+#input {
+    width: 200px;
+    height: 40px;
+    border-radius: 30px;
+    
+}
+
+#submit {
+    border: 1px solid lightpink;
+    padding: 10px 20px;
+    background: none;
+    font-size: 20px;
+    border-radius: 40px;
+    bottom: 0px;
+    text-align: right;
+}
+
+#submit:hover{
+    background: royalblue;
+    transition: 0.8s
+
+}
+
+#bar {
+    width: 600px;
+    height: 60px;
+    background:darkgreen;
+    margin-top: 100px;
+    border-radius: 30px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+}
+
+li {
+    float: left;
+    margin-top: 30px;
+}
+
+
+img {
+        float: left;
+        margin-top: 5px;
+        margin-left: 0;
+        left:0;
+        
+      }
+
+#send {
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+}
