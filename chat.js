@@ -55,12 +55,11 @@ let totalChat = document.querySelector("#submit").addEventListener("click", func
  let newUser = document.createElement('p');
  newUser.className = "user";
  newUser.innerHTML = input
- mainChat.appendChild(newUser)
+ mainChat.appendChild(newUser).scrollTop
  document.getElementById("headShow").innerHTML = 'Chatbot is typing';
 	  setTimeout(function(){ output(input); }, 5000);
 	  document.getElementById("input").value = ""; //clear input value
-	  var elmnt = document.getElementById("mainuser");
-	  elmnt.scrollTop;
+	 
 	}
 	
 );
@@ -83,7 +82,7 @@ function output(input){
  let newBot = document.createElement('p');
  newBot.className = "chatbot";
  newBot.innerHTML = product
- mainChat.appendChild(newBot)
+ mainChat.appendChild(newBot).scrollTop
  document.getElementById("headShow").innerHTML = '';
 	// document.getElementById("mainuser").innerHTML += `eze@:~$ ${product} <br>`;
 	// document.getElementById("chatbot").innerHTML += product +'<br>';
@@ -104,6 +103,8 @@ function compare(arr, array, string){
 	}
 	return item;
 }
+
+
 
 
 

@@ -16,15 +16,25 @@ body {
    margin-left: auto;
    margin-right: auto;
    text-align: center;
-   overflow-y: scroll;
-  scroll-behavior: smooth;
-      
+    overflow-y: auto;
+    transform: rotate(180deg);
+  scroll-behavior: smooth; 
+  margin-top: 180px;
+  scrollbar-width: none;       
+}
+
+#dad::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
 }
  
- /* #mainuser {
- 
+ #mainuser {
+    display: flex;
+    overflow: auto;
+    flex-direction: column;
+    transform: rotate(180deg);
   
-}  */
+} 
 
  .user {
     border: 2px solid;
@@ -33,9 +43,9 @@ body {
     width:45px;
     height:45px;
     border-radius:10px 10px 0 10px;
-    float:right;
-    width:50%;
-    
+    float:left;
+    width:50%;   
+    left:100%;
     /* display: block;
     width: 20px;
     height: 10px;
@@ -65,8 +75,8 @@ body {
     width:45px;
     height:45px;
     border-radius:10px 10px 0 10px;
-    float:left;
-    width:50%;
+    float:right;
+    width:50%;  
     /* -webkit-animation: glow 1s ease-in-out infinite alternate;
     -moz-animation: glow 1s ease-in-out infinite alternate;
     animation: glow 1s ease-in-out infinite alternate;
@@ -84,9 +94,10 @@ body {
 
 
 #input {
-    width: 200px;
+    width: 450px;
     height: 40px;
     border-radius: 30px;
+    position: sticky;
     
 }
 
@@ -110,10 +121,13 @@ body {
     width: 600px;
     height: 60px;
     background:darkgreen;
-    margin-top: 100px;
+    margin-top: 535px;
     border-radius: 30px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
+    position: absolute;
+    overflow: hidden;
+    bottom: 600px;
 }
 
 ul {
@@ -138,7 +152,9 @@ img {
       }
 
 #send {
-    position: fixed;
-    bottom: 0;
+    position: absolute;
+    top: 0;
     text-align: center;
+    margin-top: 800px;
+
 }
