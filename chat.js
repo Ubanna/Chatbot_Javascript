@@ -55,7 +55,7 @@ let totalChat = document.querySelector("#submit").addEventListener("click", func
  let newUser = document.createElement('p');
  newUser.className = "user";
  newUser.innerHTML = input
- mainChat.appendChild(newUser).scrollTop
+ mainChat.appendChild(newUser)
  document.getElementById("headShow").innerHTML = 'Chatbot is typing';
 	  setTimeout(function(){ output(input); }, 5000);
 	  document.getElementById("input").value = ""; //clear input value
