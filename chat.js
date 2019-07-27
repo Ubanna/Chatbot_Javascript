@@ -1,5 +1,27 @@
+const chatting = document.querySelector("#Chat")
+const chatDad = document.querySelector("#father")
+const stopChat = document.querySelector(".btn")
+const chatting2 = document.querySelector("#move")
+let product = input + "=" + eval(input);
 
-let trigger = [
+
+chatting.addEventListener('click', () => {
+   
+	chatDad.style.display = "inline-block";
+	chatting2.style.display = "none";
+
+})
+
+
+stopChat.addEventListener('click', () => {
+   
+	chatDad.style.display = "none";
+	chatting2.style.display = "block";
+
+})
+
+
+let keywords = [
 	["hi","hey","hello"], 
 	["how are you", "how is life", "how are things"],
 	["what are you doing", "what is going on"],
@@ -16,14 +38,14 @@ let trigger = [
   ["dark phoenix", "Dark Phoenix", "Phoenix", "phoenix", "XMEN", "xmen", "dark"],
   ["I miss you", "miss you"]
 ];
-let reply = [
+let response = [
 	["Hi, Welcome to Uba Cinema!","Hey,Welcome to Uba Cinema!","Hello,Welcome to Uba Cinema!"], 
 	["Fine", "Pretty well", "Fantastic"],
 	["Nothing much", "About to go to sleep", "Can you guess?", "I don't know actually", "I am in LearnFactory, Aba"],
 	["I am 1 day old"],
 	["I am just a bot", "I am a bot. What are you?"],
 	["Ubanna", "My God"],
-	["I am nameless", "I don't have a name"],
+	["I am Special", "I have name, ask again, guess"],
 	["I love you too", "Me too"],
 	["Have you ever felt bad?", "Glad to hear it"],
 	["Why?", "Why? You shouldn't!", "Try watching TV"],
@@ -38,13 +60,10 @@ let reply = [
   Cinema Hall - Hall Z
   
   RUNNING TIME 87 MINS`],
-  ["Me too", "I miss you too"]
+  ["Me too", "I miss you too"],
 ];
-let alternative = ["Come again...", "Hmmmm...", "Please what movie are you interested in?", "Ask me anything"];
-let totalChat = document.querySelector("#submit").addEventListener("click", function(e){
-		// let input = document.getElementById("input").value;
-		// document.getElementById("mainuser").innerHTML += `user@:~$ ${input} <br>`;
-		// document.getElementById("user").innerHTML += input +'<br>';
+let defaultResponse = ["Come again...", "Hmmmm...", "Please what movie are you interested in?", "Ask me anything", "Kk", "You too"];
+let totalChat = document.querySelector("#submit").addEventListener("click", (e) => {
 		let input = document.getElementById("input").value;
 		if (input === "") {
 			alert("Say something");
@@ -56,24 +75,24 @@ let totalChat = document.querySelector("#submit").addEventListener("click", func
  newUser.className = "user";
  newUser.innerHTML = input
  mainChat.appendChild(newUser)
- document.getElementById("headShow").innerHTML = 'Chatbot is typing';
-	  setTimeout(function(){ output(input); }, 5000);
+ document.getElementById("headShow").innerHTML = 'Im special is typing';
+	  setTimeout(function(){ reply(input); }, 5000);
 	  document.getElementById("input").value = ""; //clear input value
 	 
 	}
 	
 );
 
-function output(input){
+const reply = (input) => {
 	try{
-		var product = input + "=" + eval(input);
+		product = input + "=" + eval(input);
 	} catch(e){
-		var text = (input.toLowerCase()).replace(/[^\w\s\d]/gi, ""); //remove all chars except words, space and 
-		text = text.replace(/ a /g, " ").replace(/i feel /g, "").replace(/whats/g, "what is").replace(/please /g, "").replace(/ please/g, "");
-		if(compare(trigger, reply, text)){
-			var product = compare(trigger, reply, text);			
+		let inputFromUser = (input.toLowerCase()).replace(/[^\w\s\d]/gi, "");
+		inputFromUser = inputFromUser.replace(/ a /g, " ").replace(/i feel /g, "").replace(/whats/g, "what is").replace(/please /g, "").replace(/ please/g, "");
+		if(converge(keywords, response, inputFromUser)){
+			product = converge(keywords, response, inputFromUser);			
 		} else {
-			var product = alternative[Math.floor(Math.random()*alternative.length)]
+			product = defaultResponse[Math.floor(Math.random()*defaultResponse.length)]
 			
 		}
 	}
@@ -82,28 +101,23 @@ function output(input){
  let newBot = document.createElement('p');
  newBot.className = "chatbot";
  newBot.innerHTML = product
- mainChat.appendChild(newBot).scrollTop
+ mainChat.appendChild(newBot)
  document.getElementById("headShow").innerHTML = '';
-	// document.getElementById("mainuser").innerHTML += `eze@:~$ ${product} <br>`;
-	// document.getElementById("chatbot").innerHTML += product +'<br>';
-	// speak(product);
-
-}
+	}
 
 
-function compare(arr, array, string){
-	var item;
-	for(var x=0; x<arr.length; x++){
-		for(var y=0; y<array.length; y++){
-			if(arr[x][y] == string){
-				items = array[x];
-				item =  items[Math.floor(Math.random()*items.length)];
+const converge = (arrayKeywords, arrayResponse, text) => {
+	let botResponse;
+	for(let i=0; i<arrayKeywords.length; i++){
+		for(let j=0; j<arrayResponse.length; j++){
+			if(arrayKeywords[i][j] == text){
+				botResponses = arrayResponse[i];
+				botResponse =  botResponses[Math.floor(Math.random()*botResponses.length)];
 			}
 		}
 	}
-	return item;
+	return botResponse;
 }
-
 
 
 
