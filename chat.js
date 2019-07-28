@@ -63,7 +63,7 @@ let response = [
   ["Yes I am"],
   ["Javascript and English for now"],
 ];
-let defaultResponse = ["Come again...", "Hmmmm...", "I like chatting" , "Ask me anything", "Kk", "You too"];
+let defaultResponse = ["Come again...", "Hmmmm...", "I like chatting" , "Ask me anything", "Kk", "You too", "Teacher: What is a baby lizard called?... Akpos: a baby lizard is called lizzybaby"];
 let totalChat = document.querySelector("#submit").addEventListener("click", (e) => {
 		let input = document.getElementById("input").value;
 		if (input === "") {
