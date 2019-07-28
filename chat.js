@@ -23,46 +23,47 @@ stopChat.addEventListener('click', () => {
 
 let keywords = [
 	["hi","hey","hello"], 
-	["how are you", "how is life", "how are things"],
+	["how are you", "how is life", "what's up", "whats happening"],
 	["what are you doing", "what is going on"],
-	["how old are you"],
-	["who are you", "are you human", "are you bot", "are you human or bot"],
+	["how old are you", "what is your age"],
+	["who are you", "are you human", "are you bot"],
+	["i love you", "love", "love you"],
+	["happy", "thankful", "great", "cool", "good", "that's great"],
+	["bad", "hate", "angry"],
 	["who created you", "who made you"],
 	["your name please",  "your name", "may i know your name", "what is your name"],
-	["i love you"],
-	["happy", "good"],
-	["bad", "bored", "tired"],
 	["help me", "tell me story", "tell me joke"],
 	["ah", "yes", "ok", "okay", "nice", "thanks", "thank you"],
   ["bye", "good bye", "goodbye", "see you later"],
-  ["dark phoenix", "Dark Phoenix", "Phoenix", "phoenix", "XMEN", "xmen", "dark"],
-  ["I miss you", "miss you"]
+  ["where do you live", "where do you stay"],
+  ["i miss you", "miss you"],
+  ["are you a male or female", "are you a female"],
+  ["what are you hobbies", "hobbies"],
+  ["are you real"],
+  ["what language do you speak"],
 ];
 let response = [
-	["Hi, Welcome to Uba Cinema!","Hey,Welcome to Uba Cinema!","Hello,Welcome to Uba Cinema!"], 
+	["Hi","Hey!","Hello!", "Sup?"], 
 	["Fine", "Pretty well", "Fantastic"],
-	["Nothing much", "About to go to sleep", "Can you guess?", "I don't know actually", "I am in LearnFactory, Aba"],
-	["I am 1 day old"],
+	["Lets change the topic", "Nothing much", "About to go to sleep", "Can you guess?", "I don't know actually", "I am somewhere in Nigeria"],
+	["I am 12 days old", "Im still a baby"],
 	["I am just a bot", "I am a bot. What are you?"],
-	["Ubanna", "My God"],
+	["Ubanna", "My god"],
+	["I love you too", "Me too", "God loves you too"],
+	["Good to know", "Glad to hear it", "cool stuff"],
+	["Why?", "Cheer up!", "dont be hateful"],
 	["I am Special", "I have name, ask again, guess"],
-	["I love you too", "Me too"],
-	["Have you ever felt bad?", "Glad to hear it"],
-	["Why?", "Why? You shouldn't!", "Try watching TV"],
-	["I will", "What about?"],
-	["Tell me a story", "Tell me a joke", "Tell me about yourself", "You are welcome"],
+	["I will", "What about?", "Teacher: What is a baby lizard called?... Akpos: a baby lizard is called lizzybaby"],
+	["Tell me a story", "Tell me a joke", "Tell me about yourself", "You are welcome", "Kk", "that's nice"],
   ["Bye", "Goodbye", "See you later"],
-  [`DARK PHOENIX
-  Now the X-Men will have to decide if the life of a team member is worth more than all the people living in the world.
-  Starring: James McAvoy, Michael Fassbender, Jennifer Lawrence
-  Fri to Thu: 10:20AM, 12:20PM, 2:25PM, 4:30PM, 6:45PM, 8:55PM
-  Price: NGN1,500
-  Cinema Hall - Hall Z
-  
-  RUNNING TIME 87 MINS`],
+  ["In Nigeria", "In a Laptop"],
   ["Me too", "I miss you too"],
+  ["It doesn't matter"],
+  ["chatting"],
+  ["Yes I am"],
+  ["Javascript and English for now"],
 ];
-let defaultResponse = ["Come again...", "Hmmmm...", "Please what movie are you interested in?", "Ask me anything", "Kk", "You too"];
+let defaultResponse = ["Come again...", "Hmmmm...", "I like chatting" , "Ask me anything", "Kk", "You too"];
 let totalChat = document.querySelector("#submit").addEventListener("click", (e) => {
 		let input = document.getElementById("input").value;
 		if (input === "") {
